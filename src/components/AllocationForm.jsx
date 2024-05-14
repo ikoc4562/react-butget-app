@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import { AppContext } from '../context/AppContext'
 
 const AllocationForm = (props) => {
-  const { dispatch, remaining } = useContext(AppContext)
+  const { dispatch, remaining , currency} = useContext(AppContext)
 
   const [name, setName] = useState('')
   const [cost, setCost] = useState('')
@@ -86,6 +86,7 @@ const AllocationForm = (props) => {
             </option>
           </select>
           <div className="form-group mt-lg-0 mt-4 align-items-center d-flex">
+          <span style={{paddingLeft:'15px'}}>{currency}</span>
             <input
               className="ms-5 input-group-prepend p-1 "
               required="required"
